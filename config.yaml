@@ -1,0 +1,17 @@
+superpoint_extractor:
+  onnx_file: "/root/workspace/hfe/model/superpoint_v1_sim_int32.onnx"
+  engine_file: "/root/workspace/hfe/model/superpoint_v1_sim_int32.engine"
+  enable_fp16: 1
+  enable_dla : 0 
+  streams: 1
+  input_width: 150
+  input_height: 150
+  input_tensor_names: 
+    - "input"
+  output_tensor_names:
+    - "scores"
+    - "descriptors"
+  threshold: 0.35
+  nms_radius: 20
+  max_point: 100
+  test_image: "/root/workspace/hfe/test_data/superpoint_test_out0030.png"
